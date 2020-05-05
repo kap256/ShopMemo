@@ -1,0 +1,75 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
+    package="com.fc2.blog.karepuri39.shopmemo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:name=".background.App">
+
+
+        <activity android:name=".main.MainActivity" android:label="お買い物メモ"
+            android:roundIcon="@mipmap/ic_launcher_round">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".memo.MemoActivity" android:label="お買い物メモ">
+            
+        </activity>
+
+        <receiver android:name=".memo.MemoWidget" android:label="お買い物メモ"
+            android:roundIcon="@mipmap/ic_launcher_round">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/memo_widget_def" />
+        </receiver>
+
+        <receiver android:name=".turn.TurnWidget" android:label="画面回転"
+            android:roundIcon="@android:drawable/ic_menu_always_landscape_portrait">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/turn_widget_def" />
+        </receiver>
+        <receiver android:name=".wake.WakeWidget" android:label="ランチモード"
+            android:roundIcon="@android:drawable/ic_menu_always_landscape_portrait">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/wake_widget_def" />
+        </receiver>
+
+        <receiver android:name=".background.SystemReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".turn.TurnReceiver">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".background.CheckerService"></service>
+        <service android:name=".turn.TurnService"></service>
+        <service android:name=".wake.WakeService"></service>
+
+
+
+    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+</manifest>

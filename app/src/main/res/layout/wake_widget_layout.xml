@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="2dp">
+
+
+    <Button
+        android:id="@+id/WakeImage"
+        style="@android:style/Widget.DeviceDefault.Button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:drawable/ic_lock_idle_low_battery"
+        android:backgroundTintMode="src_over"
+        android:visibility="visible"
+        tools:layout_margin="4dpi" />
+
+</LinearLayout>

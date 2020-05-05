@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="2dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="お買い物メモ"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <EditText
+        android:id="@+id/memo_editor"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/frame"
+        android:gravity="top"
+        android:hint="お買い物メモ"
+        android:inputType="textMultiLine"
+        android:lineSpacingExtra="8sp"
+        android:padding="5dp"
+        android:saveEnabled="false"
+        android:scrollbars="none"
+        android:textSize="24sp" />
+
+</LinearLayout>
