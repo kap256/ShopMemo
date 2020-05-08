@@ -42,7 +42,7 @@ public class Http {
                             @Override
                             public void onErrorResponse(VolleyError error) {
                                 //String error_mes = new String(error.networkResponse.data);
-                                Mylog.i("HTTP_Error:");
+                                Mylog.i("HTTP_Error:"+error.getMessage());
                                 listener.Error();
                             }
                         }
