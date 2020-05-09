@@ -10,6 +10,7 @@ import android.view.Surface;
 
 import com.fc2.blog.karepuri39.shopmemo.IO.Mylog;
 import com.fc2.blog.karepuri39.shopmemo.IO.Toaster;
+import com.fc2.blog.karepuri39.shopmemo.background.App;
 
 public class TurnService extends IntentService {
     public TurnService(){
@@ -23,6 +24,7 @@ public class TurnService extends IntentService {
         } catch (InterruptedException e) {
         }
         turn(this.getApplicationContext(),null);
+
     }
 
     static public void turn(Context context,Integer rotate)
@@ -37,10 +39,12 @@ public class TurnService extends IntentService {
                         case Surface.ROTATION_0:
                         case Surface.ROTATION_180:
                             rotate = Surface.ROTATION_90;
+                            TurnWidget.ChangeIcon(android.R.drawable.ic_media_play);
                             break;
                         case Surface.ROTATION_90:
                         case Surface.ROTATION_270:
                             rotate = Surface.ROTATION_0;
+                            TurnWidget.ChangeIcon();
                             break;
                     }
                 }

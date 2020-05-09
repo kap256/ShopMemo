@@ -11,5 +11,6 @@ public class TurnReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         Mylog.d("TurnReceiver::onReceive");
         TurnService.turn(context,Surface.ROTATION_0);
+        TurnWidget.ChangeIcon();
     }
 }
