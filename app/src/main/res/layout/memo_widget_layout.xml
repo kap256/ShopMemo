@@ -14,9 +14,10 @@
         android:layout_weight="1"
         android:background="@drawable/frame"
         android:clickable="true"
-        android:lineSpacingExtra="8sp"
+        android:lineSpacingExtra="6sp"
         android:padding="3dp"
         android:text="TextView"
-        android:textSize="18sp" />
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
 
 </LinearLayout>
