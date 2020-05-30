@@ -42,6 +42,7 @@ public class MemoWidget extends AppWidgetProvider {
 
         mComponentName = new ComponentName(context, MemoWidget.class);
     }
+
     public static void Update(Context context, AppWidgetManager appWidgetManager){
         Init(context);
         Preference pref = new Preference(context);

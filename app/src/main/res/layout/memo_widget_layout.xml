@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="@drawable/frame"
+        android:background="@drawable/memo_frame"
         android:clickable="true"
         android:lineSpacingExtra="6sp"
         android:padding="3dp"

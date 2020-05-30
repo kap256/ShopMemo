@@ -39,12 +39,20 @@
             </intent-filter>
             <meta-data android:name="android.appwidget.provider" android:resource="@xml/turn_widget_def" />
         </receiver>
+
         <receiver android:name=".wake.WakeWidget" android:label="ランチモード"
-            android:roundIcon="@android:drawable/ic_menu_always_landscape_portrait">
+            android:roundIcon="@android:drawable/ic_lock_idle_low_battery">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
             <meta-data android:name="android.appwidget.provider" android:resource="@xml/wake_widget_def" />
+        </receiver>
+        <receiver android:name=".clock.ClockWidget" android:label="時計"
+            android:roundIcon="@android:drawable/ic_lock_idle_alarm">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/clock_widget_def" />
         </receiver>
 
         <receiver android:name=".background.SystemReceiver">
